@@ -1,0 +1,9 @@
+---
+port: 3000
+app_name: app
+elasticsearch:
+  retry_on_failue: true
+  log: true
+  hosts:
+    - host: localhost
+      port: 9200

@@ -16,12 +16,12 @@ module Bunches
 
     # Connection to elasticsearch
     #
-    # @return [Elasticsearch::Client] keep-alive connection to ElasticSearch
+    # @return [Elasticsearch::Transport::Client] keep-alive connection to ElasticSearch
     def es
       # Make sure typhoeus gem is loaded before creating ES client
       #   This ensures we have a keep-alive connection to ES;
       #   see: https://github.com/elasticsearch/elasticsearch-ruby#usage
-      require 'typhoeus'
+      require 'typhoeus/adapters/faraday'
 
       # Elasticsearch connection
       Elasticsearch::Client.new(@env[:elasticsearch])
@@ -29,9 +29,13 @@ module Bunches
   end
 end
 
+# Make instance variable available at the top level
 @config = Bunches::Config.instance
 
+# Refuse to startup if cluster statis is red
+raise "The ElasticSearch cluster status is RED" if @config.es.cluster.health['status'] == 'red'
+
 # Load all ruby files in lib/CONFIG['appname']
-Dir[File.expand_path("../../lib/#{@config.env[:app_name]}/*.rb", __FILE__)].each do |f|
+Dir[File.expand_path("#{@config.env[:app_name]}/*.rb", __FILE__)].each do |f|
   require f
 end

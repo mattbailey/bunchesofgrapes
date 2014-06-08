@@ -8,12 +8,10 @@ rvm:
   - 2.1.0
   - 2.0.0
   - rbx-2
-  - rbx-head
 
 matrix:
   allow_failures:
     - rvm: ruby-head
-    - rvm: rbx-head
 
 services:
   - elasticsearch

@@ -1,6 +1,6 @@
 # Bunches of Grapes
 
-[![Build Status](https://travis-ci.org/mattbailey/bunchesofgrapes.svg?branch=master)](https://travis-ci.org/mattbailey/bunchesofgrapes) [![Inline docs](http://inch-ci.org/github/mattbailey/bunchesofgrapes.png?branch=master)](http://inch-ci.org/github/mattbailey/bunchesofgrapes) [![Dependency Status](https://www.versioneye.com/user/projects/5393d26146c473b10100005f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5393d26146c473b10100005f)
+[![Build Status](https://travis-ci.org/mattbailey/bunchesofgrapes.svg?branch=master)](https://travis-ci.org/mattbailey/bunchesofgrapes) [![Inline docs](http://inch-ci.org/github/mattbailey/bunchesofgrapes.png?branch=master)](http://inch-ci.org/github/mattbailey/bunchesofgrapes) [![Dependency Status](https://www.versioneye.com/user/projects/5393d26146c473b10100005f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5393d26146c473b10100005f) [![Code Climate](https://codeclimate.com/github/mattbailey/bunchesofgrapes.png)](https://codeclimate.com/github/mattbailey/bunchesofgrapes)
 
 Welcome to Bunches of Grapes or "Bunches" for short.  This repo is meant to be forked for your own application.
 
